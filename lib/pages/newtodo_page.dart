@@ -45,9 +45,7 @@ class _NewToDoPageState extends State<NewToDoPage> {
       ],
     );
   }
-  a() {
 
-  }
   void _saveToDo() async{
     final todoItem = ToDoItem(taskname:todoitemscontroller.text);
     print(todoItem.toString());
