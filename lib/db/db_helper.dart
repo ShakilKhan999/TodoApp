@@ -23,7 +23,7 @@ class DBHelper{
   }
   static Future<List<ToDoItem>> getAllToDoItem() async{
     final db = await open();
-    final List<Map<String,dynamic>> mapList =await  db.query(tableTodo);
+    final List<Map<String,dynamic>> mapList = await  db.query(tableTodo);
     return List.generate(mapList.length, (index) => ToDoItem.fromMap(mapList[index]));
   }
   static Future<int> updateChecked(int id ,int value) async{
